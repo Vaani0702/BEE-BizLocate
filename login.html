@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BizLocate - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased min-h-screen flex flex-col">
+<header class="bg-white w-full top-0 sticky border-b border-gray-200 z-50 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-center items-center h-20">
+<a class="brand-link flex items-center gap-3" href="index.html">
+<div class="brand-mark"><span class="material-symbols-outlined text-white text-[22px]">location_city</span></div>
+<span class="brand-wordmark"><span class="biz">Biz</span><span class="locate">Locate</span></span>
+</a>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 relative">
+<div class="bg-white border border-gray-200 p-8 md:p-12 rounded-xl shadow-lg w-full max-w-md relative overflow-hidden">
+<div class="text-center mb-8">
+<h1 class="text-2xl font-extrabold text-gray-900">Welcome back</h1>
+<p class="text-sm text-gray-500 mt-1">Sign in to continue to BizLocate</p>
+<div class="flex items-center justify-center space-x-4 border-b border-gray-200 mt-6 mb-2">
+<span class="pb-2 px-4 text-blue-700 border-b-2 border-blue-700 font-bold">Login</span>
+<a class="pb-2 px-4 text-gray-500 hover:text-blue-700 font-semibold" href="signup.html">Signup</a>
+</div>
+</div>
+<div class="relative">
+<form class="form-transition form-visible space-y-6" id="form-login">
+<div class="space-y-2">
+<label class="block text-sm text-gray-600 font-semibold" for="login-email">Email Address</label>
+<input class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600" id="login-email" placeholder="Enter your email" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm text-gray-600 font-semibold" for="login-password">Password</label>
+<input class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600" id="login-password" placeholder="Enter your password" required="" type="password"/>
+</div>
+<button class="w-full bg-orange-500 text-white font-bold py-3 rounded-lg hover:bg-orange-600 transition-colors shadow-md" type="submit">Sign In</button>
+<p class="text-center text-sm text-gray-500">Don't have an account? <a class="text-blue-700 font-bold hover:underline" href="signup.html">Signup</a></p>
+</form>
+</div>
+</div>
+</main>
+<script src="script.js"></script>
+</body></html>

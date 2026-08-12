@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BizLocate - Match Your Business to the Right Property</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="bg-white text-gray-900 antialiased flex flex-col min-h-screen">
+<header class="bg-white w-full top-0 sticky border-b border-gray-200 z-50 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center h-20">
+<a class="brand-link flex items-center gap-3" href="index.html">
+<div class="brand-mark"><span class="material-symbols-outlined text-white text-[22px]">location_city</span></div>
+<span class="brand-wordmark"><span class="biz">Biz</span><span class="locate">Locate</span></span>
+</a>
+<nav class="hidden md:flex gap-8 text-sm" id="main-nav">
+<a class="nav-link" data-nav="index" href="index.html">Home</a>
+<a class="nav-link" data-nav="business" href="business-form.html">For Business</a>
+<a class="nav-link" data-nav="owner" href="owner-form.html">For Owners</a>
+<a class="nav-link" data-nav="listings" href="listings.html">Listings</a>
+</nav>
+<div class="flex items-center gap-3" id="auth-container">
+<a class="hidden md:block text-blue-700 font-bold px-4 py-2 rounded hover:bg-blue-50 transition-colors" href="login.html">Login</a>
+<a class="bg-orange-500 text-white font-bold px-6 py-2.5 rounded-lg hover:bg-orange-600 shadow-sm transition-colors" href="signup.html">Register</a>
+</div>
+<div class="hidden items-center gap-5" id="user-container">
+<a class="text-gray-500 hover:text-orange-500 transition-colors" href="wishlist.html" title="Wishlist"><span class="material-symbols-outlined">favorite</span></a>
+<a class="text-gray-500 hover:text-blue-700 transition-colors" href="profile.html" title="Profile"><span class="material-symbols-outlined">account_circle</span></a>
+<button class="text-blue-700 font-bold px-4 py-2 rounded hover:bg-blue-50 transition-colors" id="logoutBtn">Logout</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800">
+<div class="absolute inset-0 z-0">
+<img alt="Industrial park exterior" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWu8OhFhuiZxRtL7gffoVh9cbKenir-egradAKnlmK-gdlg2fM662FZS2UurYr5x85FIXIj5bVjM9KQxBfH-om2c--1QK2ZLq5o1jkN7-gKy-vgyAtb6tlSwS3aZb-iBTMJZGrG5feZ2SPH3XIDoy9wwpsyu7Jy7QMOLM5XTD4J5fTqgrN5ZQFzAcTjHMQ4tF6JAOlCRGkPb-CLx9wTLr2JlNiKdTR222kYSB3ShzPJL0t8eMF9vms"/>
+</div>
+<div class="relative z-10 w-full max-w-5xl mx-auto px-6 flex flex-col items-center text-center py-20 reveal active">
+<span class="badge bg-orange-500/90 text-white mb-6 shadow-lg">Industrial Real Estate Intelligence</span>
+<h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-md leading-tight">Find the Perfect Space for <span class="text-orange-400">Your Business</span></h1>
+<p class="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">SiteIQ compares your operational needs against real property data — precision-matched for modern logistics, manufacturing, and enterprise.</p>
+<div class="bg-white rounded-xl p-6 w-full max-w-4xl shadow-2xl border border-gray-100">
+<div class="flex flex-col md:flex-row gap-4">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-gray-400">location_on</span>
+<input class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none" placeholder="City, Locality, or Project (e.g., Bhiwandi, Pune)" type="text"/>
+</div>
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-gray-400">category</span>
+<select class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none appearance-none">
+<option>Property Type</option><option>Warehouse</option><option>Manufacturing Unit</option><option>Cold Storage</option>
+</select>
+</div>
+<button class="bg-orange-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors shadow-md" onclick="window.location.href='listings.html'">Search</button>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+<button class="w-full sm:w-auto bg-white text-blue-900 font-bold px-8 py-4 rounded-lg hover:-translate-y-1 transition-transform shadow-lg" id="cta-business">I'm a Business</button>
+<button class="w-full sm:w-auto border-2 border-orange-400 text-orange-300 font-bold px-8 py-4 rounded-lg hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors" id="cta-owner">I'm a Property Owner</button>
+</div>
+</div>
+</section>
+<section class="py-16 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8">Popular Industrial Hubs</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<a class="group relative rounded-xl overflow-hidden cursor-pointer brand-card shadow-sm" href="listings.html">
+<div class="absolute inset-0 bg-gradient-to-t from-blue-950 to-transparent opacity-80 z-10"></div>
+<img class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQySyQuS5aPmev9rwITG2I8LL_9lJP5CJnDA9KOBj_HgJVohSY3IIAex8GM3wrINN4wRjSpxZGWTj9oUDGBOdVnCbGcsJ3En84nxswuNzWQ78MmCbvG2S9YklGKUq65Y3G_xwvwYrMK3rsD74JynMzz0Z0Y4bd0fW4tUEl6HjNxXMzuo-YHrMPwh4rrEkp3HLeIXU31GTQ8afz0BFA0VmPVRuty3jLpYtgj2jVuekZ1kksoqkJMS0F"/>
+<div class="absolute bottom-0 left-0 p-6 z-20"><h3 class="text-xl font-bold text-white mb-1">Bhiwandi</h3><p class="text-sm text-blue-100">1,200+ Properties</p></div>
+</a>
+<a class="group relative rounded-xl overflow-hidden cursor-pointer brand-card shadow-sm" href="listings.html">
+<div class="absolute inset-0 bg-gradient-to-t from-blue-950 to-transparent opacity-80 z-10"></div>
+<img class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtNaNjS_Ht4MqyFHA8RXcIsOIkwkJKWskqOXniBUiVqBL3_Uk0l6dAU694v0eIVo0STwtTO6fCDnHOfcwaQzkwuUGkBCoJH-6_Ch0gveG2_FYwPsJlYS1btP9FSfIJ9UX3Z_mOw5hk-DcJY0euKUbJwZmvytVhtdYIvzxsGy2ZQReQW2t1iHCFoQH-dUcll1Hvp7POiKBhEOnCCIf7QF9U-QasSSqFF9NElvc2dynt4EAXKAksAQx-"/>
+<div class="absolute bottom-0 left-0 p-6 z-20"><h3 class="text-xl font-bold text-white mb-1">Pune</h3><p class="text-sm text-blue-100">850+ Properties</p></div>
+</a>
+<a class="group relative rounded-xl overflow-hidden cursor-pointer brand-card shadow-sm" href="listings.html">
+<div class="absolute inset-0 bg-gradient-to-t from-blue-950 to-transparent opacity-80 z-10"></div>
+<img class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC5o2r821P-jMMvTsAFAnuy9o9VZy7R2T_ShmWuU2SF4PWARhydF2UHvveY6kEy-smfUjTQkNKOWBr_i8x0HQuNdc_Sb3tX-tPuOiBKvIeRq1mp3nl93UjxIZMM8gZKBWDytT3WTgHLwEOOxx2o2bfGJ_u7--vCuo3Jd6Z9gwPFtHBCW_LnngBxGGMe5IER_1jAQQw5OS56SMlR_1JyGebWAQVRplskGKKmrFXlFCCvnkBHi3WsMVl"/>
+<div class="absolute bottom-0 left-0 p-6 z-20"><h3 class="text-xl font-bold text-white mb-1">Gurgaon</h3><p class="text-sm text-blue-100">600+ Properties</p></div>
+</a>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white border-y border-gray-100">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="text-center mb-16 reveal active">
+<h2 class="text-3xl font-extrabold text-gray-900">How BizLocate Works</h2>
+<div class="h-1.5 w-16 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-blue-50 border border-blue-100 p-8 rounded-xl relative reveal active brand-card">
+<div class="absolute -top-6 -left-6 w-12 h-12 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center font-extrabold text-blue-700 shadow-sm">1</div>
+<span class="material-symbols-outlined text-4xl text-blue-700 mb-4 block">tune</span>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Tell us needs</h3>
+<p class="text-gray-600">Input your precise operational requirements: clear height, power capacity, docking doors, and zoning restrictions.</p>
+</div>
+<div class="bg-orange-50 border border-orange-100 p-8 rounded-xl relative reveal active brand-card">
+<div class="absolute -top-6 -left-6 w-12 h-12 bg-white border-2 border-orange-500 rounded-full flex items-center justify-center font-extrabold text-orange-600 shadow-sm">2</div>
+<span class="material-symbols-outlined text-4xl text-orange-600 mb-4 block">all_match</span>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Match</h3>
+<p class="text-gray-600">Our algorithm cross-references your needs against our structured database of industrial properties, generating a compatibility score.</p>
+</div>
+<div class="bg-green-50 border border-green-100 p-8 rounded-xl relative reveal active brand-card">
+<div class="absolute -top-6 -left-6 w-12 h-12 bg-white border-2 border-green-600 rounded-full flex items-center justify-center font-extrabold text-green-700 shadow-sm">3</div>
+<span class="material-symbols-outlined text-4xl text-green-700 mb-4 block">verified</span>
+<h3 class="text-xl font-bold text-gray-900 mb-2">See verified status</h3>
+<p class="text-gray-600">Review properties with verified structural data. Connect directly with owners when the match meets your operational threshold.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="mb-16 reveal active"><h2 class="text-3xl font-extrabold text-gray-900">Structural Precision</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<div class="md:col-span-8 bg-white border border-gray-200 rounded-xl overflow-hidden flex flex-col md:flex-row reveal active shadow-sm">
+<div class="p-8 flex-1 flex flex-col justify-center">
+<span class="badge badge-available w-fit mb-4">Tier 1 Verified</span>
+<h3 class="text-xl font-bold text-gray-900 mb-4">Verification Tiers</h3>
+<p class="text-gray-600">Properties aren't just listed; they are structurally verified. BizLocate employs a stringent tiered verification system ensuring data accuracy for critical infrastructure like power grids, floor load capacity, and ceiling heights.</p>
+</div>
+<div class="w-full md:w-1/2 bg-gray-100 h-full relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWXpCiTjpcMLL9w7H_136wfg1OqiA7jC2RggmzYhCCMo65nvRf62RVgjJFf-Fqv5_7IN3vFdbBzrb70jFYDvDH1kxY7vpYfOmQjKD977Djpi5E9LpIxuCIeP8oYQCqzG5kXA92YcPTd9DtiHoDWX1-t7R2zvkiakaswSS4nAWLNPvH7ENHO4umRq9vIrI_aijvxw1Ocd9v7M0cHJQdgu6B3eYKIXUgzF28zthNb-1dabst7gA2Bdqo'); background-size: cover; background-position: center;"></div>
+</div>
+<div class="md:col-span-4 bg-gradient-to-br from-blue-900 to-blue-950 text-white rounded-xl overflow-hidden p-8 flex flex-col justify-between reveal active shadow-sm">
+<div>
+<span class="material-symbols-outlined text-4xl text-orange-400 mb-4 block">data_object</span>
+<h3 class="text-xl font-bold mb-2">Algorithm Preview</h3>
+<p class="text-blue-100">Go beyond square footage. Our matching algorithm weighs 40+ operational variables.</p>
+</div>
+<div class="mt-8 border-t border-white/20 pt-4">
+<div class="flex justify-between items-center mb-2"><span class="text-xs text-blue-200">Match Score</span><span class="text-xl font-bold text-orange-400">94%</span></div>
+<div class="w-full bg-white/20 h-2 rounded-full overflow-hidden"><div class="bg-orange-400 h-full w-[94%]"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-blue-950 w-full mt-auto border-t border-blue-900">
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-white">
+<div>
+<a class="flex items-center gap-2 mb-4" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center"><span class="material-symbols-outlined text-white text-[18px]">location_city</span></div>
+<span class="text-xl font-extrabold">BizLocate</span>
+</a>
+<p class="text-sm text-blue-200">Your trusted partner in finding premium industrial real estate across India.</p>
+</div>
+<div><h4 class="text-xs uppercase text-blue-300 font-bold mb-4 tracking-wider">Company</h4><ul class="space-y-2 text-sm"><li><a class="text-blue-200 hover:text-white" href="#">About Us</a></li><li><a class="text-blue-200 hover:text-white" href="#">Contact Broker</a></li></ul></div>
+<div><h4 class="text-xs uppercase text-blue-300 font-bold mb-4 tracking-wider">Legal</h4><ul class="space-y-2 text-sm"><li><a class="text-blue-200 hover:text-white" href="#">Privacy Policy</a></li><li><a class="text-blue-200 hover:text-white" href="#">Terms of Service</a></li></ul></div>
+<div><h4 class="text-xs uppercase text-blue-300 font-bold mb-4 tracking-wider">Quick Links</h4><ul class="space-y-2 text-sm"><li><a class="text-blue-200 hover:text-white" href="owner-form.html">List Property</a></li><li><a class="text-blue-200 hover:text-white" href="listings.html">Browse Listings</a></li></ul></div>
+</div>
+<div class="border-t border-blue-900 text-center py-6"><p class="text-xs text-blue-300">© 2024 BizLocate Industrial. All rights reserved.</p></div>
+</footer>
+<script src="script.js"></script>
+</body></html>
