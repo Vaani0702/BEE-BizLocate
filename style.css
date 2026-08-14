@@ -1,0 +1,189 @@
+/* =========================================================
+   BizLocate - shared stylesheet
+   One unified, brighter design system (blue + orange, 99acres-style)
+   used identically across every page: logo, top navbar, footer,
+   badges, and card treatments.
+   ========================================================= */
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* ---- Unified top navbar links (index.html, listings.html, etc.) ---- */
+.nav-link {
+  color: #4b5563; /* gray-600 */
+  font-weight: 700;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.nav-link:hover { color: #1d4ed8; } /* blue-700 */
+.nav-link.active { color: #1d4ed8; border-bottom-color: #1d4ed8; }
+
+/* ---- Logo mark (used on every page, always links to index.html) ---- */
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(30, 58, 138, 0.25);
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+.brand-link:hover .brand-mark { transform: scale(1.06); }
+.brand-wordmark { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; }
+.brand-wordmark .biz { color: #1e3a8a; }
+.brand-wordmark .locate { color: #f97316; }
+
+/* ---- Bright badges reused across listing cards ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.badge-premium { background: #f97316; color: #fff; }
+.badge-available { background: #059669; color: #fff; }
+.badge-draft { background: #6b7280; color: #fff; }
+.badge-match { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+
+/* ---- Bright card hover treatment ---- */
+.brand-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.brand-card:hover {
+  box-shadow: 0 12px 28px -6px rgba(29, 78, 216, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ---- Scroll reveal (index.html) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(209, 213, 219, 0.5);
+}
+
+/* ---- Login / Signup form transitions ---- */
+.form-transition {
+  transition: opacity 0.4s ease-in-out, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.form-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+.form-visible {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+  visibility: visible;
+}
+
+/* ---- Business / Owner form (blueprint grid) ---- */
+body.blueprint-grid {
+  background-color: #F7F5F2;
+  background-image:
+    linear-gradient(to right, rgba(0, 82, 209, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 82, 209, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.form-input-focus:focus-within {
+  background-color: #F1F1F1;
+  border-color: #0052d1;
+}
+
+/* ---- Listings cards ---- */
+.card-hover:hover {
+  box-shadow: 0 4px 12px rgba(0, 82, 209, 0.08);
+}
+
+/* ---- Enquiries page ---- */
+.hover-elevate {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.hover-elevate:hover {
+  box-shadow: 0 12px 24px -4px rgba(0, 82, 209, 0.08);
+  transform: translateY(-2px);
+}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ---- Profile dashboard (Material tokens page) ---- */
+body.profile-body {
+  background-color: #f6f3f4;
+}
+
+/* =========================================================
+   Small additions needed to make the JS layer (script.js) work.
+   Kept minimal and neutral so they don't clash with the existing
+   design language of any page.
+   ========================================================= */
+
+/* Toast notifications used by showToast() in script.js */
+#toast-container {
+  position: fixed;
+  top: 88px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+.toast {
+  min-width: 240px;
+  max-width: 340px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.toast.show { opacity: 1; transform: translateX(0); }
+.toast.success { background: #16a34a; }
+.toast.error { background: #dc2626; }
+.toast.info { background: #1d4ed8; }
+
+/* Wishlist heart button state */
+.wishlist-btn {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.wishlist-btn:hover { transform: scale(1.1); }
+.wishlist-btn.active .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1;
+  color: #f97316;
+}
+
+/* Empty-state helper used across dynamic pages */
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: #6b7280;
+  border: 1px dashed #d1d5db;
+  border-radius: 12px;
+  background: #fff;
+}
