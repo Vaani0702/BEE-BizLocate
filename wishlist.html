@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Wishlist - BizLocate</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+<header class="bg-white w-full top-0 sticky border-b border-gray-200 z-50 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center h-20">
+<a class="brand-link flex items-center gap-3" href="index.html">
+<div class="brand-mark"><span class="material-symbols-outlined text-white text-[22px]">location_city</span></div>
+<span class="brand-wordmark"><span class="biz">Biz</span><span class="locate">Locate</span></span>
+</a>
+<nav class="hidden md:flex gap-8 text-sm" id="main-nav">
+<a class="nav-link" data-nav="index" href="index.html">Home</a>
+<a class="nav-link" data-nav="business" href="business-form.html">For Business</a>
+<a class="nav-link" data-nav="owner" href="owner-form.html">For Owners</a>
+<a class="nav-link" data-nav="listings" href="listings.html">Listings</a>
+</nav>
+<div class="flex items-center gap-3" id="auth-container">
+<a class="hidden md:block text-blue-700 font-bold px-4 py-2 rounded hover:bg-blue-50 transition-colors" href="login.html">Login</a>
+<a class="bg-orange-500 text-white font-bold px-6 py-2.5 rounded-lg hover:bg-orange-600 shadow-sm transition-colors" href="signup.html">Register</a>
+</div>
+<div class="hidden items-center gap-5" id="user-container">
+<a class="text-orange-500 transition-colors" href="wishlist.html" title="Wishlist"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">favorite</span></a>
+<a class="text-gray-500 hover:text-blue-700 transition-colors" href="profile.html" title="Profile"><span class="material-symbols-outlined">account_circle</span></a>
+<button class="text-blue-700 font-bold px-4 py-2 rounded hover:bg-blue-50 transition-colors" id="logoutBtn">Logout</button>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-7xl mx-auto w-full px-4 md:px-8 py-8 md:py-12 flex flex-col gap-6">
+<div>
+<h1 class="text-2xl font-extrabold text-gray-900 flex items-center gap-2"><span class="material-symbols-outlined text-orange-500">favorite</span> Saved Wishlist</h1>
+<p class="text-gray-500">Properties you've bookmarked for later.</p>
+</div>
+<div class="flex flex-col gap-6" id="wishlistContainer">
+<!-- Cards rendered by script.js (renderWishlist) -->
+</div>
+</main>
+<footer class="bg-blue-950 w-full mt-auto border-t border-blue-900">
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-white">
+<div>
+<a class="flex items-center gap-2 mb-4" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center"><span class="material-symbols-outlined text-white text-[18px]">location_city</span></div>
+<span class="text-xl font-extrabold">BizLocate</span>
+</a>
+<p class="text-sm text-blue-200">© 2024 BizLocate Industrial. All rights reserved.</p>
+</div>
+<div><h4 class="text-xs uppercase text-blue-300 font-bold mb-4 tracking-wider">Company</h4><ul class="space-y-2 text-sm"><li><a class="text-blue-200 hover:text-white" href="#">About Us</a></li><li><a class="text-blue-200 hover:text-white" href="#">Contact Broker</a></li></ul></div>
+<div><h4 class="text-xs uppercase text-blue-300 font-bold mb-4 tracking-wider">Legal</h4><ul class="space-y-2 text-sm"><li><a class="text-blue-200 hover:text-white" href="#">Privacy Policy</a></li><li><a class="text-blue-200 hover:text-white" href="#">Terms of Service</a></li></ul></div>
+<div><h4 class="text-xs uppercase text-blue-300 font-bold mb-4 tracking-wider">Quick Links</h4><ul class="space-y-2 text-sm"><li><a class="text-blue-200 hover:text-white" href="owner-form.html">List Property</a></li><li><a class="text-blue-200 hover:text-white" href="#">Site Map</a></li></ul></div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body></html>
